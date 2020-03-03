@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Filter Table</h1>
+  <div class="search">
+    <input placeholder="Search for title" [(ngModel)]="searchValue" type="text">
+  </div>
+  <table>
+    <tr class="header">
+      <th>userId</th>
+      <th>id</th>
+      <th>title</th>
+      <th>body</th>
+    </tr>
+    <tr *ngFor="let user of users | SearchFilter: searchValue">
+      <td>{{user.userId}}</td>
+      <td>{{user.id}}</td>
+      <td>{{user.title}}</td>
+      <td>{{user.body}}</td>
+    </tr>
+  </table>
+</div>
