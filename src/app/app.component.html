@@ -1,1 +1,6 @@
-<app-user [users]=users></app-user>
+<app-table (searchValueChanged)="getSearchValue($event)">
+  <app-table-header (sortStateOutput)="setSortState($event)"></app-table-header>
+  <app-table-body [sortState]="sortState" [searchValue]="searchValue" [users]="users"></app-table-body>
+  <app-table-footer></app-table-footer>
+</app-table>
+

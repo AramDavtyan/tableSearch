@@ -1,0 +1,42 @@
+tr{
+  background: #eee;
+  display: flex;
+  width: calc(80% - 15px);
+  position: fixed;
+}
+th {
+  display: flex;
+  height: 60px;
+  text-align: left;
+  border: 1px solid #ddd;
+  align-items: center;
+  padding: 0 10px;
+}
+th:nth-last-child(1) {
+  flex-basis: 50%;
+}
+th:nth-last-child(2) {
+  flex-basis: 30%;
+}
+th:nth-last-child(3), th:nth-last-child(4) {
+  flex-basis: 10%;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.sort{
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left:14px solid #000000;
+  cursor: pointer;
+}
+.sort_2{
+  transform: rotate(90deg);
+}
+.sort_3{
+  transform: rotate(-90deg);
+}
+

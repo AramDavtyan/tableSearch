@@ -1,0 +1,6 @@
+<tr *ngFor="let user of users | SearchFilter: searchValue | sortPipe: 'id':sortState">
+  <td>{{user.userId}}</td>
+  <td>{{user.id}}</td>
+  <td>{{user.title}}</td>
+  <td>{{user.body}}</td>
+</tr>

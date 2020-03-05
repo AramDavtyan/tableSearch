@@ -2,19 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import {FormsModule} from '@angular/forms';
-import {SearchPipeModule} from './share/pipes/search.module';
+import {TableModule} from './components/table/table.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UserComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    SearchPipeModule
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

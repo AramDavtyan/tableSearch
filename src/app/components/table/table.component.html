@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Filter Table</h1>
+  <div class="search">
+    <input placeholder="Search for title" [ngModel]="searchValue"
+           (ngModelChange)="getSearchValue($event)"
+           type="text"/>
+  </div>
+  <table>
+    <ng-content></ng-content>
+  </table>
+</div>

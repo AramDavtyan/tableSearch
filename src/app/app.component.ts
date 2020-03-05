@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IUser} from './models/user/user';
+import {SortStateEnum} from './share/enums/sort-state.enum';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,8 @@ import {IUser} from './models/user/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public searchValue: string;
+  public sortState: SortStateEnum;
   public users: Array<IUser> = [
     {
       userId: 1,
@@ -81,4 +84,10 @@ export class AppComponent {
       body: 'ullam et saepe reiciendis voluptatem adipiscisit amet autem assumenda provident rerum culpaquis hic commodi nesciunt rem tenetur doloremque ipsam iurequis sunt voluptatem rerum illo velit'
     },
   ];
+  public getSearchValue(event) {
+    this.searchValue = event;
+  }
+  public setSortState(event) {
+    this.sortState = event;
+  }
 }
